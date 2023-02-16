@@ -7,7 +7,6 @@ import jakarta.persistence.Id;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
-import smile.example.smile.models.Tratamiento;
 
 @Entity
 @Table(name = "paciente")

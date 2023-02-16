@@ -3,6 +3,7 @@ package smile.example.smile.models.java;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
@@ -11,7 +12,7 @@ import jakarta.persistence.Table;
 @Entity
 @Table (name = "perfil")
 public class Perfil {
-    @Id @GeneratedValue (strategy = GerenationType.IDENTITY) @Column (name = "id_perfil" , nullable = false)    
+    @Id @GeneratedValue (strategy = GenerationType.IDENTITY) @Column (name = "id_perfil" , nullable = false)    
     private String apellido;
     private int edad;
     private int telefono;
@@ -38,19 +39,19 @@ public class Perfil {
         this.apellido = apellido;
     }
 
-    public Int getEdad() {
+    public int getEdad() {
         return edad;
     }
 
-    public void setEdad(Int edad) {
+    public void setEdad(int edad) {
         this.edad = edad;
     }
 
-    public Int getTelefono() {
+    public int getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(Int telefono) {
+    public void setTelefono(int telefono) {
         this.telefono = telefono;
     }
 

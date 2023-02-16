@@ -3,6 +3,7 @@ package smile.example.smile.models.java;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
@@ -10,7 +11,7 @@ import jakarta.persistence.Table;
 @Entity
 @Table (name = "ciudad")
 public class Ciudad {
-    @Id @GeneratedValue (strategy = GerenationType.IDENTITY) @Column (name = "id_ciudad")
+    @Id @GeneratedValue (strategy = GenerationType.IDENTITY) @Column (name = "id_ciudad")
     private Long id;
     @Column (nullable = false)
     private String ciudad;
