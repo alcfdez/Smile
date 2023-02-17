@@ -1,5 +1,7 @@
 package smile.example.smile.models.java;
 
+import java.util.List;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -11,16 +13,16 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "paciente")
 public class Paciente {
-    @Id @Column (name = "dni")
+    @Id @Column (name = "dni" , nullable = false)
     private String dni;
-    @Column(nullable = false)
+    @Column( length=30 , nullable = false)
     private String nombre;
 
     @OneToOne
     private Perfil perfil;
 
     @ManyToMany
-    private Tratamiento tratamiento;
+    private List< Tratamiento > tratamiento;
     
     public Paciente(String dni, String nombre) {
         this.dni = dni;
